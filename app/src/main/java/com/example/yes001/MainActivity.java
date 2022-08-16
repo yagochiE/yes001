@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.btn1);
 
         tv1.setText("헬로 월드~~~");
-        tv1.setText("바꼈나요?");
-        tv1.setText("안되는 것 같은데...");
 
         day = 0; test1 = 0;
         btn1.setOnClickListener(new View.OnClickListener() {
