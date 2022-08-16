@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     TextView tv1, tv2;
     Button btn1;
-    int day;
+    int day, test1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
         tv1.setText("헬로 월드~~~");
         tv1.setText("바꼈나요?");
+        tv1.setText("안되는 것 같은데...");
 
-        day = 0;
+        day = 0; test1 = 0;
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 6 : tv2.setText("일요일");
                         day = 0;
+                        test1 = 1;
                         break;
                 }
             }
