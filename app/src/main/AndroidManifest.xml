@@ -23,6 +23,8 @@
             android:exported="true"></activity>
         <activity android:name=".Test"
             android:exported="true"/>
+        <activity android:name=".TimeTableTest"
+            android:exported="true" />
         <receiver android:name=".Alarm_Receiver" />
         <service android:name=".RingtonePlayingService"
             android:enabled="true" />

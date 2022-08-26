@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Test extends AppCompatActivity {
 
-    Button btn;
+    Button btn, btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +17,20 @@ public class Test extends AppCompatActivity {
         setContentView(R.layout.test);
 
         btn = findViewById(R.id.btn);
+        btn2 = findViewById(R.id.btn2);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AlarmSet.class);
+                startActivity(intent);
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TimeTableTest.class);
                 startActivity(intent);
             }
         });

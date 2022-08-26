@@ -18,4 +18,11 @@
         android:text="화면 이동"
         android:textSize="70dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn2"
+        android:text="시간표로 이동"
+        android:textSize="40dp"/>
+
 </LinearLayout>

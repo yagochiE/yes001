@@ -5,13 +5,13 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
@@ -22,6 +22,7 @@ public class AlarmSet extends AppCompatActivity {
     Context context;
     PendingIntent pi;
     Button btnStart, btnFinish;
+    ToggleButton tbtn1, tbtn2, tbtn4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -29,6 +30,11 @@ public class AlarmSet extends AppCompatActivity {
         setContentView(R.layout.alarm_set);
 
         this.context = this;
+
+        // findviewbyid
+        tbtn1 = findViewById(R.id.tbtn1);
+        tbtn2 = findViewById(R.id.tbtn2);
+        tbtn4 = findViewById(R.id.tbtn4);
 
         // 알람매니저 설정
         am = (AlarmManager)getSystemService(ALARM_SERVICE);
@@ -84,5 +90,47 @@ public class AlarmSet extends AppCompatActivity {
                 sendBroadcast(intent);
             }
         });
+
+        // 토글버튼 테스트 tbtn1
+        tbtn1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                tbtn1.setBackgroundResource(R.drawable.tbtn_test);
+                if (b) {
+                    tbtn1.setBackgroundResource(R.drawable.tbtn_day_shape_on);
+                } else {
+                    tbtn1.setBackgroundResource(R.drawable.tbtn_day_shape);
+                }
+            }
+        });
+
+        /*tbtn2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    tbtn2.setBackgroundResource(R.drawable.tbtn_day_shape_on);
+                } else {
+                    tbtn2.setBackgroundResource(R.drawable.tbtn_day_shape);
+                }
+            }
+        });*/
+
+        // 토글버튼 테스트 tbtn4
+        tbtn4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    //tbtn4.setBackgroundColor(Color.parseColor("#BDBDBD")); // 배경색 바꾸기
+                    tbtn4.setBackgroundResource(R.drawable.tbtn_day_shape_on);
+                    //Toast.makeText(context, "목요일", Toast.LENGTH_SHORT).show();
+                } else {
+                    // text color도 바꿔야 됨
+                    //tbtn4.setBackgroundColor(Color.parseColor("#00000000"));
+                    tbtn4.setBackgroundResource(R.drawable.tbtn_day_shape);
+                    //tbtn4.setBackgroundResource(0); // background 속성 없애기
+                }
+            }
+        });
+
     }
 }

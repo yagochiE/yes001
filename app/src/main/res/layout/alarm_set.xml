@@ -21,7 +21,138 @@
         <TimePicker
             android:id="@+id/tp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:layout_gravity="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_marginHorizontal="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="반복"
+            android:layout_margin="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:gravity="center">
+
+            <ToggleButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/tbtn1"
+                android:textOn="월"
+                android:textOff="월"
+                android:textSize="20dp"
+
+                android:background="@drawable/tbtn_test"
+                android:layout_marginHorizontal="4dp"
+                android:padding="1dp" />
+
+            <ToggleButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/tbtn2"
+                android:textOn="화"
+                android:textOff="화"
+                android:textSize="20dp"
+                android:background="@drawable/tbtn_test"
+                android:layout_marginHorizontal="4dp"
+                android:padding="1dp" />
+
+            <ToggleButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/tbtn3"
+                android:textOn="수"
+                android:textOff="수"
+                android:textSize="20dp"
+                android:background="@drawable/tbtn_test_ripple"
+                android:layout_marginHorizontal="4dp"
+                android:padding="1dp" />
+
+            <ToggleButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/tbtn4"
+                android:textOn="목"
+                android:textOff="목"
+                android:textSize="20dp"
+                android:background="@drawable/tbtn_day_shape"
+                android:layout_marginHorizontal="4dp"
+                android:padding="1dp" />
+
+            <ToggleButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/tbtn5"
+                android:textOn="금"
+                android:textOff="금"
+                android:textSize="20dp"
+                android:background="@drawable/tbtn_day_shape"
+                android:layout_marginHorizontal="4dp"
+                android:padding="1dp" />
+
+            <ToggleButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/tbtn6"
+                android:textOn="토"
+                android:textOff="토"
+                android:textSize="20dp"
+                android:background="@drawable/tbtn_day_shape"
+                android:layout_marginHorizontal="4dp"
+                android:padding="1dp" />
+
+            <ToggleButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/tbtn7"
+                android:textOn="일"
+                android:textOff="일"
+                android:textSize="20dp"
+                android:background="@drawable/tbtn_day_shape"
+                android:layout_marginHorizontal="4dp"
+                android:padding="1dp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_marginHorizontal="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="알람 이름"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textAlarmName"
+                android:hint="알람 이름 입력"
+                android:textSize="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
@@ -31,15 +162,24 @@
         android:gravity="center">
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancel"
+            android:layout_weight="1"
+            android:text="취소" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/btnStart"
+            android:layout_weight="1"
             android:text="시작" />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/btnFinish"
+            android:layout_weight="1"
             android:text="종료" />
 
     </LinearLayout>
