@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Timetable_Main">
+        <attr name="cellTextColor" format="color" />
+        <attr name="cellColor" format="color" />
+        <attr name="cellMarginRight" format="integer" />
+        <attr name="cellMarginTop" format="integer" />
+        <attr name="cellMarginBottom" format="integer" />
+        <attr name="cellMarginLeft" format="integer" />
+    </declare-styleable>
+</resources>
