@@ -1,2 +1,5 @@
 rootProject.name = "yes001"
 include ':app'
+include ':timetable001'
+include ':timetable001:timetable002'
+include ':timetable_test1'

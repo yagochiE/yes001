@@ -11,6 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/timetable001" />
+            <option value="$PROJECT_DIR$/timetable001/timetable002" />
+            <option value="$PROJECT_DIR$/timetable_test1" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
